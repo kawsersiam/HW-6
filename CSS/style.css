@@ -1,0 +1,84 @@
+/* *COMMON CSS STARTS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    text-align: center;
+    background: #800080;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+    padding: 15px 0;
+}
+ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    z-index: 1;
+    padding: 18px 23px;
+    position: relative;
+    font-family: arial;
+    
+}
+
+
+
+nav ul li a::before{
+    content: '';
+    width:0%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    z-index: -1;
+    transition: 0.35;
+    -webkit-transition: 0.7;
+    -moz-transition: 0.7;
+    -ms-transition: 0.7;
+    -o-transition: 0.7;
+}
+nav ul li:hover a::before{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.167);
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    z-index: -1;
+    border-radius: 30px
+}
+nav ul li a::after{
+    content: '';
+    width:0%;
+    height: 100%;
+    bottom:0;
+    right:0;
+    position: absolute;
+    z-index: -1;
+    transition: 0.7;
+    -webkit-transition: 0.7;
+    -moz-transition: 0.7;
+    -ms-transition: 0.7;
+    -o-transition: 0.7;
+}
+nav ul li:hover a::after{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.184);
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.s;
+    -o-transition: 0.7s;
+    z-index: -1;
+    border-radius: 30px
+}
+/* *COMMON CSS ENDS */
